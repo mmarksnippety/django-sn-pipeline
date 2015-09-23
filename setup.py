@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='sn-django-pipeline',
@@ -8,7 +8,7 @@ setup(
     author='Marcin Markiewicz',
     author_email='marcin@snippety.pl',
     license='MIT',
-    packages=['sn-django-pipeline'],
+    packages=find_packages(include=('sn-django-pipeline*', )),
     install_requires=open('requirements.txt').read(),
     zip_safe=False
 )
